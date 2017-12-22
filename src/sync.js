@@ -3,8 +3,6 @@ var mongo = require('./mongodb');
 var redis = require('./redis');
 var amqp = require('./amqp');
 
-module.exports.mongo = mongo;
-
 module.exports = function (config) {
   var proto = '';
   config = config || { db: 'mongodb://localhost:27017/sync' };
@@ -31,3 +29,5 @@ module.exports = function (config) {
 
   }
 };
+
+module.exports.mongo = mongo;
